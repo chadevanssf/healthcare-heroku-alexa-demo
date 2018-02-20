@@ -1,13 +1,23 @@
 {
-  "version": 1,
-  "connection": {
-    "app_name": "healthcare-heroku-alexa-demo"
-  },
   "mappings": [
     {
+      "object_name": "Battle_Station__c",
       "config": {
+        "access": "read_write",
+        "sf_notify_enabled": false,
         "sf_polling_seconds": 600,
-        "upsert_field": "Room_ID__c",
+        "sf_max_daily_api_calls": 30000,
+        "fields": {
+          "Weapons_Status__c": {},
+          "Project_Status__c": {},
+          "Name": {},
+          "IsDeleted": {},
+          "SystemModstamp": {},
+          "CreatedDate": {},
+          "Alexa_Is_Ready__c": {},
+          "Id": {},
+          "Station_Id__c": {}
+        },
         "indexes": {
           "SystemModstamp": {
             "unique": false
@@ -15,28 +25,16 @@
           "Id": {
             "unique": true
           },
-          "Room_ID__c": {
+          "Station_Id__c": {
             "unique": true
           }
         },
-        "sf_max_daily_api_calls": 30000,
-        "sf_notify_enabled": true,
-        "fields": {
-          "Room__c": {},
-          "CreatedDate": {},
-          "SystemModstamp": {},
-          "IsDeleted": {},
-          "Room_ID__c": {},
-          "Status__c": {},
-          "OwnerId": {},
-          "Id": {},
-          "Floor__c": {},
-          "Name": {},
-          "Alexa_Is_Ready__c": {}
-        },
-        "access": "read_write"
-      },
-      "object_name": "Hospital_Room__c"
+        "upsert_field": "Station_Id__c"
+      }
     }
-  ]
+  ],
+  "connection": {
+    "app_name": "healthcare-heroku-alexa-demo"
+  },
+  "version": 1
 }
