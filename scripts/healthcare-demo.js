@@ -38,10 +38,6 @@ violet.respondTo({
 violet.defineGoal({
   goal: 'list',
   resolve: function (response) {
-    if (!response.ensureGoalFilled('targetName')) {
-      return false; // dependent goals not met
-    }
-
     // make sure to return the promise so that the async call resolves
     return dbUtil.getStationsToActivate()
       .then((rows) => {
