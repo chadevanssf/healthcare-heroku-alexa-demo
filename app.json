@@ -1,0 +1,25 @@
+{
+  "name": "healthcare-heroku-alexa-demo",
+  "description": "Demo for healthcare for Alexa and Salesforce Heroku",
+  "keywords": [
+    "heroku",
+    "alexa",
+    "salesforce",
+    "violet"
+  ],
+  "repository": "https://github.com/chadevanssf/healthcare-heroku-alexa-demo",
+  "env": {
+    "NODE_ENV": {
+      "description": "What kind of environment this is, production or development are common values",
+      "value": "development"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:hobby-dev"
+    },
+    {
+      "plan": "herokuconnect:demo"
+    }
+  ]
+}
