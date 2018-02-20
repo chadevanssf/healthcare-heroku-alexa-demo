@@ -47,7 +47,6 @@ dbUtil.getStationQuery = function() {
 dbUtil.getStationsToActivateQuery = function() {
   return dbUtil.getBaseStationQuery()
     .where("project_status__c = ?", "Green")
-    .where("name = $1")
     .order("name")
     .limit(5)
     .toString();
