@@ -57,7 +57,7 @@ violet.defineGoal({
     var tName = response.get(STATION_NAME);
 
     var resp1 = `Got it. I am updating station ${tName} now`;
-    var resp1 = `I will update station ${tName} right away`;
+    var resp2 = `I will update station ${tName} right away`;
 
     response.say([resp1,resp2]);
 
@@ -77,7 +77,7 @@ violet.defineGoal({
     resolve: (response) => {
       var tName = response.get(STATION_NAME);
       if (IS_DEBUG) {
-        response.say(`Got it, station ${tName}}`);
+        response.say(`Got it, station ${tName}`);
       }
       response.set(STATION_NAME, tName);
   }}]
